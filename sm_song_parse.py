@@ -61,13 +61,13 @@ for pack in os.listdir(songs_path):
                                     if "dance-single:" in line:
                                         author = simfile.readline().lstrip().split(':')[0]
                                         difficulty = simfile.readline().lstrip().split(':')[0]
-                                        level = simfile.readline().lstrip().split(':')[0]
+                                        level = int(simfile.readline().lstrip().split(':')[0])
                                         double = False
                                         charts.append(Chart("dance-single", difficulty, level, author, double, 1))
                                     if "dance-double:" in line:
                                         author = simfile.readline().lstrip().split(':')[0]
                                         difficulty = simfile.readline().lstrip().split(':')[0]
-                                        level = simfile.readline().lstrip().split(':')[0]
+                                        level = int(simfile.readline().lstrip().split(':')[0])
                                         double = True
                                         charts.append(Chart("dance-double", difficulty, level, author, double, 1))
                             songs.append(Song(pack, title, subtitle, artist, credit, bpm, charts, hash))
