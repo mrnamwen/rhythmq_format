@@ -5,6 +5,7 @@ RhythmQ accepts custom packs in RhythmQ JSON format, a format designed to accomo
 When importing, please make sure your data is in the following format:
 ```json
 [{
+"pack": "",
 "songName":"",
 "songArtist":"",
 "bpm":999,
@@ -20,6 +21,7 @@ When importing, please make sure your data is in the following format:
 ```
 
 BPM and difficulty numbers can be floats, but RhythmQ does not currently accept BPM ranges. Please average your BPM before adding it to the format.
+`pack` is an optional designator that allows RhythmQ to order a songlist by pack. Leaving this designator empty, or leaving it out entirely, will place your song in the "Uncategorised" category. 
 
 
 # Parsers
